@@ -3,7 +3,7 @@
 
 Race::Race() {}
 
-void Race::printLane(int horsenum) {
+void Race::lane(int horsenum) {
     for (int i = 0; i < track; i++) {
         if (i == horses[horsenum].getpos()) {
             printf("%d", horsenum);
@@ -23,7 +23,7 @@ void Race::run() {
     while (proceed) {
         for (int i = 0; i < horsenum; i++) {
             horses[i].move();
-            printLane(i);
+            lane(i);
             if (winner(i)) {
                 printf("horse %d is the winner\n", i);
                 proceed = false;

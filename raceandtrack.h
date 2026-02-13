@@ -8,7 +8,7 @@ private:
     static const int horsenum = 5;
     static const int track = 15;
     Horse horses[horsenum];
-    void printLane(int horseId);
+    void lane(int horseId);
     bool winner(int horseId);
 
 public:
